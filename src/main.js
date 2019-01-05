@@ -7,12 +7,20 @@ import $ from 'jquery'
 
 //使用import语法，导入css样式表
 import './css/index.css'
+import './css/index.less'
+import './css/index.scss'
 //注意: webpack,默认只能打包处理js类型的文件,无法处理其他的费js类型的文件
 //如果要处理 非js类型的文件，我们需要手动安装一些合适第三方loader加载器
 //1. 如果想要打包处理css文件，需要安装 cnpm i style-loader css-loader -D
 //2.打开 webpack.config.js这个配置文件，在里面，新增一个配置节点，叫做module，他是
 //一个对象，在这个module对象身上，有个rules 属性，这个rules 属性是个数组，这个组织中，存放了
 //所有第三方文件的 匹配 和处理规则
+
+//注意: webpack 处理第三方文件类型的过程
+//1. 发现这个 要处理的文件不是js文件，然后就去 配置文件中，查找有么有对应的第三方loader规则
+//2.如果能够找到对应的规则，就会调用 对应的loader处理这种文件类型
+//3. 在调用loader的时候，是从头往前调用的
+//4. 当最后的一个loader 调用完毕，会把处理的结果，直接交给webpack进行 打包合并，最终输出打包到bundle.js中去
 
 
 $(function () {
