@@ -3,8 +3,18 @@
 // import * from ** 是es6中导入模块的方式
 //由于es6的代码。太高级了。浏览器解析不了，所以这一行执行会报错
 import $ from 'jquery'
-
 // const $ = require('jquery') node导入方式
+
+//使用import语法，导入css样式表
+import './css/index.css'
+//注意: webpack,默认只能打包处理js类型的文件,无法处理其他的费js类型的文件
+//如果要处理 非js类型的文件，我们需要手动安装一些合适第三方loader加载器
+//1. 如果想要打包处理css文件，需要安装 cnpm i style-loader css-loader -D
+//2.打开 webpack.config.js这个配置文件，在里面，新增一个配置节点，叫做module，他是
+//一个对象，在这个module对象身上，有个rules 属性，这个rules 属性是个数组，这个组织中，存放了
+//所有第三方文件的 匹配 和处理规则
+
+
 $(function () {
     $('li:odd').css('backgroundColor','red');
     $('li:even').css('backgroundColor',function () {
