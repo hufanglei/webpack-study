@@ -1,0 +1,29 @@
+{
+  "name": "webpack-study",
+  "version": "1.0.0",
+  "description": "\"# webpack-study\"",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hufanglei/webpack-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hufanglei/webpack-study/issues"
+  },
+  "homepage": "https://github.com/hufanglei/webpack-study#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^3.12.0",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
