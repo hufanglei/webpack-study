@@ -6,7 +6,7 @@ import $ from 'jquery'
 
 // const $ = require('jquery') node导入方式
 $(function () {
-    $('li:odd').css('backgroundColor','green');
+    $('li:odd').css('backgroundColor','black');
     $('li:even').css('backgroundColor',function () {
         return '#' + 'D97634';
     });
